@@ -1,0 +1,30 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > input {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: none;
+  width: 10rem;
+}
+
+.success {
+  color: rgb(127, 218, 127);
+}
+
+.error {
+  color: rgb(226, 141, 141);
+}
+
+/* .login-form > button {
+  background-color: rgb(24, 88, 224);
+}
+
+.login-form > button:hover {
+  background-color: rgb(77, 120, 214);
+} */

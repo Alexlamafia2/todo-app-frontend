@@ -1,0 +1,22 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.header-items {
+  display: flex;
+  align-items: center;
+}
+
+.header-item {
+  margin: 0 1rem;
+}

@@ -1,0 +1,11 @@
+.footer {
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  left: 0;
+}
+
+.footer > hr {
+  opacity: 0.2;
+  width: 10%;
+}

@@ -1,11 +1,14 @@
 import { useState } from "react";
 import classes from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../store/authContext";
 
 export default function Login() {
-  const [username, setUsername] = useState("Alexey");
+  // const [username, setUsername] = useState("Alexey");
   const [password, setPassword] = useState("");
-  const [isAuth, setIsAuth] = useState(null);
+  const [error, setError] = useState(false);
+
+  const { isAuth, username, setUsername, login } = useAuth();
 
   const navigate = useNavigate();
 
@@ -19,25 +22,20 @@ export default function Login() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (username === "Alexey" && password === "dummy") {
-      console.log("Success");
-      setIsAuth(true);
-      navigate("/welcome");
+    if (login(username, password)) {
+      navigate(`/welcome`);
     } else {
-      console.log("Error");
-      setIsAuth(false);
+      setError(true);
     }
   }
 
   return (
     <div className={classes.login}>
       <h1>Login</h1>
-      {/* {isAuth && (
+      {isAuth && (
         <div className={classes.success}>Authenticated Successfully</div>
-      )} */}
-      {!isAuth && isAuth !== null && (
-        <div className={classes.error}>Invalid credentials.</div>
       )}
+      {error && <div className={classes.error}>Invalid credentials.</div>}
       <form onSubmit={handleSubmit} className={classes["login-form"]}>
         <input
           type="text"

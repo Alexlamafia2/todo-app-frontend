@@ -1,0 +1,46 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.table > thead {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.table > thead,
+.table > tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container-trs-head > td {
+  text-align: start;
+  padding: 1rem 0;
+  width: 20rem;
+}
+
+.container-trs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.container-trs > td {
+  padding: 1rem 0;
+  text-align: start;
+  margin: 0 0rem;
+  width: 20rem;
+}

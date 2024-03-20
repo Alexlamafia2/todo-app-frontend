@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 // 1. Create Context
 export const AuthContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => useContext(AuthContext);
 
 // eslint-disable-next-line react/prop-types
@@ -17,6 +18,7 @@ export default function AuthProvider({ children }) {
       return true;
     } else {
       setIsAuth(false);
+      setUsername(null);
       return false;
     }
   }

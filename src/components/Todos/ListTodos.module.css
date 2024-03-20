@@ -25,7 +25,7 @@
   justify-content: center;
 }
 
-.container-trs-head > td {
+.container-trs-head > th {
   text-align: center;
   padding: 1rem 0;
   width: 20rem;
@@ -43,4 +43,32 @@
   text-align: center;
 
   width: 20rem;
+}
+
+.delete-btn {
+  background-color: rgb(207, 166, 70);
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: rgb(219, 190, 124);
+  border: none;
+}
+
+.update-btn {
+  background-color: rgb(36, 111, 36);
+  border: none;
+}
+
+.update-btn:hover {
+  background-color: rgb(133, 205, 133);
+  border: none;
+}
+
+.success {
+  color: rgb(83, 205, 83);
+}
+
+.failed {
+  color: rgb(209, 80, 80);
 }

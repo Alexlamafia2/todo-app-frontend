@@ -9,6 +9,7 @@ import TodosPage from "./pages/Todos";
 import Logout from "./components/Auth/Logout";
 import AuthProvider, { useAuth } from "./store/authContext.jsx";
 import HomePage from "./pages/Home.jsx";
+import TodoUpdate from "./components/Todos/TodoUpdate.jsx";
 
 // eslint-disable-next-line react/prop-types
 function AuthRoute({ children }) {
@@ -54,6 +55,14 @@ const router = createBrowserRouter([
         element: (
           <AuthRoute>
             <Logout />
+          </AuthRoute>
+        ),
+      },
+      {
+        path: "todo/:id",
+        element: (
+          <AuthRoute>
+            <TodoUpdate />
           </AuthRoute>
         ),
       },
